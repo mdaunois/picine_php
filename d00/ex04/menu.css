@@ -1,81 +1,89 @@
-.bandau{
-	margin-left: auto;
-	margin-right: auto;
-	width: 1500px;
-	height: 100px;
-	background-color: blue;
-}
-#menu, #menu ul /* Liste */     
-{
-        padding : 0; /* pas de marge intérieure */
-        margin : 0; /* ni extérieure */
-        list-style : none; /* on supprime le style par défaut de la liste */
-        line-height : 21px; /* on définit une hauteur pour chaque élément */
-        text-align : center; /* on centre le texte qui se trouve dans la liste */
+body{
+    font-family:  serif;
+    margin: 0px;
+    padding: 0px;
 }
 
-#menu /* Ensemble du menu */
-{
-        font-weight : bold; /* on met le texte en gras */
-        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
-        font-size : 12px; /* hauteur du texte : 12 pixels */
-}
-#menu a /* Contenu des listes */
-{
-        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
-        padding : 0; /* aucune marge intérieure */
-        background : #000; /* couleur de fond */        
-        color : #fff; /* couleur du texte */
-        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
-        width : 144px; /* largeur */
-}
-#menu li /* Éléments des listes */      
-{ 
-        float : left; 
-        /* pour IE qui ne reconnaît pas "transparent" */
-        border-right : 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
+nav > ul{
+    margin: 0px;
+    padding: 0px;
 }
 
-/* IE ne reconnaissant pas le sélecteur ">" */
-html>body #menu li
-{
-        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+nav > ul > li{
+    float: left;
 }
 
-#menu li ul /* Sous-listes */
-{ 
-        position: absolute; /* Position absolue */
-       /* width: 144px; /* Largeur des sous-listes */
-        /*left: -999em; /* Hop, on envoie loin du champ de vision */
+nav li{
+    list-style-type: none;
 }
 
-
-#menu li ul li /* Eléments de sous-listes */
-{
-        /* pour ie qui ne reconnaît pas "transparent" (comme précédemment) */
-        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque élément d'une sous-liste */
+.submenu{
+    display: none;
 }
 
-/* IE ne reconnaissant pas le sélecteur ">" */
-html>body #menu li ul li                
-{
-        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+nav{
+    padding-left: 300px;
+    width: 100%;
+    background-color: #424558;
 }
 
-#menu li ul ul 
-{
-        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
-        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
-        border-left     : 1px solid #fff ; /* Petite bordure à gauche pour ne pas coller ... */      
+nav > ul > li{
+    float: left;
+    position: relative;
 }
 
-/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
-html>body #menu li ul ul                
-{
-        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
 }
-#menu a:hover /* Lorsque la souris passe sur un des liens */    
-{
-        color: #000; /* On passe le texte en noir... */
-        background: #fff; /* ... et au contraire, le fond en blanc */
+nav a{
+    display: inline-block;
+    text-decoration: none;
+}
+nav > ul >li > a{
+    padding: 20px 30px;
+    color: #FFF;
+}
+
+nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    padding: 0px;
+    z-index: 10000;
+}
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+.submenu li a{
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px;
+}
+.menu:hover{
+    border-top: 5px solid red;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+.sadwich:hover{
+    border-top: 5px solid blue;
+    background-color: rgba(38, 77, 228, 0.15);
+}
+.service:hover{
+    border-top: 5px solid green;
+    background-color: rgba(77, 228, 38, 0.15);
+}
+.connexion:hover{
+    border-top: 5px solid yellow;
+    background-color: rgba(30, 77, 10, 0.15);
+}
+.menu li:hover{
+    background-color: rgba(230, 70, 30, 0.15);
+}
+.sadwich li:hover{
+    background-color: rgba(30, 70, 230, 0.15);
+}
+.service li:hover{
+    background-color: rgba(70, 230, 30, 0.15);
 }
