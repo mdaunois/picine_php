@@ -37,6 +37,7 @@ nav > ul::after{
     display: block;
     clear: both;
 }
+
 nav a{
     display: inline-block;
     text-decoration: none;
@@ -44,6 +45,10 @@ nav a{
 nav > ul >li > a{
     padding: 20px 30px;
     color: #FFF;
+}
+
+nav > ul > li:hover a{
+    padding: 15px 30px 20px 30px;
 }
 
 nav li:hover .submenu{

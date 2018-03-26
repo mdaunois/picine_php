@@ -2,24 +2,45 @@
 <HEAD>
 		<TITLE>B.A.BA</TITLE>
 		<STYLE>
+		html{
+			height: 100%;
+		}
 		body
 		{
-			background-color: #FF358B; /* Le fond de la page sera noir */
+			position: relative;
+			background-color: pink;
+			min-height: 100%;
+			margin: 0;
+			padding: 0;
 			
 		}
-			h1 {color:white;}
+		h1 {
+				color:white;
+				padding-bottom: 50px;
+		}
 		.signature {
+			margin-right: 10px;
 			text-align: right;
 			font-family: monospace;
 			font-style: italic;
 		}
 		img {
-			width: 400px;
-			height: 400px;
+			max-width: 800px;
+			max-height: 400px;
+			width: 40%;
+			height: 20%;
 		}
 		.content {
 			display: flex;
 			justify-content: center;
+			padding-bottom: 50px;
+		}
+		footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
 		}
 		a {
 			text-align: center;
@@ -30,23 +51,28 @@
 	<CENTER>
 		<h1>TITLE à trouver</h1>
 	</CENTER>
+	<br/>
 	<div class="content">
 		<div class="amazon">
-			<IMG SRC="https://img.grouponcdn.com/coupons/cNj6HThNaDddYuWS19fJ/3E-500x500" />
-			<br />
 			<center>
+			<IMG title="amazon" SRC="https://img.grouponcdn.com/coupons/cNj6HThNaDddYuWS19fJ/3E-500x500" />
+			<br />
+			
 				<A HREF="http://www.amazon.fr">Aller vers Amazon</A>
 			</center>
 		</div>
 		<div class="amazon">
-			<IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Fnac_Logo.svg/1200px-Fnac_Logo.svg.png" />
-			<br />
 			<center>
+			<IMG title="fnac" SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Fnac_Logo.svg/1200px-Fnac_Logo.svg.png" />
+			<br />
+			
 				<A HREF="http://www.fnac.fr">Aller vers Fnac</A>
 			</center>
 		</div>
 	</div>
-	<HR />
-	<p class="signature">© mdaunois 2018</p>
+	<footer>
+		<HR />
+		<p class="signature">© mdaunois 2018</p>
+	</footer>
 </BODY>
 </HTML>

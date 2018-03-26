@@ -6,10 +6,11 @@ function ft_split($str)
 	$tab = array_filter($explosion);
 	return($tab);
 }
-
-foreach (array_slice($argv, 1) as $elem)
+$i = 1;
+while ($argv[$i] != NULL)
+//foreach (array_slice($argv, 1) as $elem)
 {
-	echo "----------".$elem."\n";
+	$elem = $argv[$i];
 	$tab = explode(' ', $elem);
 	$tab = array_filter($tab);
 	foreach($tab as $elem2)
@@ -21,6 +22,7 @@ foreach (array_slice($argv, 1) as $elem)
 		else
 			$other = $other." ".$elem2;
 	}
+	$i++;
 }
 $result_str = ft_split($str);
 $result_num = ft_split($num);
